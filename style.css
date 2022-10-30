@@ -1,0 +1,62 @@
+:root {
+        --main-col-one: rgba(255, 140, 0, 0.8);
+        --main-col-two: rgb(255, 203, 139);
+        --sec-col-one: hsla(289, 84%, 38%, 1);
+        --sec-col-two: purple;
+}
+* {
+        box-sizing: border-box;
+}
+body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+}
+.container {
+        height:100%;
+        display: grid;
+        grid-template-rows: 6em  3em 1fr;
+}
+.header {
+        background: linear-gradient(var(--main-col-one), purple)/* linear-gradient(var(--main-col-one) */;
+}
+.menu {
+        background-color: blanchedalmond;
+        display: flex;
+        align-items: center;
+}
+.menu button {
+        display: block;
+        height: 2.9em;
+}
+.cardContainer {
+        background-color: rgb(251, 251, 251);
+        display: flex;
+        flex-direction: column;
+
+}
+.bookCard {
+        background-color: rgb(167, 239, 255);
+        border: 2px solid black;
+        border-radius: 9px;
+        padding: 15px;
+        margin: 10px 20px 0px 20px;
+        max-height: fit-content;
+        display: grid;
+        grid-template-columns: 5em 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        font-size: 1.18em;
+
+}
+.bookCard .infoTemplate {
+        grid-row: 1 / -1;
+}
+.bookCard .bookData {
+        grid-column: 2;
+}
+.infoTemplate div {
+        margin-bottom: 10px;
+}
+.infoTemplate div::after{
+        content: ':';
+}
