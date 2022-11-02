@@ -17,7 +17,7 @@
         
         <div class="menu">
                 <button type="button" id="add">Add Book</button>
-                <button type="submit" id="new">New Book</button>
+                <button type="button" id="new">New Book</button>
         </div>
         
         <div class="cardContainer">
@@ -47,9 +47,11 @@
                         <div class="formItem Select">
                         <input type="radio" id="fread" name="fread" value="read">
                         <label for="fread">Read</label>
-                        <input type="radio" name="fnotread" id="fnotread" value="notread">
-                        <label value="fnotread" >Not read</label>
+                        <div class="spacer"></div>
+                        <input type="radio" name="fread" id="fnotread" value="notread">
+                        <label for="fnotread">Not read</label>
                         </div>
+                        <input id="addBookSubmit" type="submit" value="Submit">
 
                         </div>
                 </fieldset>
