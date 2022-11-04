@@ -24,14 +24,14 @@ Book.prototype.info = function() {
         }
 
 
-function addBookToLibrary() {
-        let title = prompt('Title?', 'Fahrenheit 451');
-        let author = prompt('Author?', 'Brownmark Samwell');
-        let pages = prompt('Pages?', '200');
-        let read = prompt('Read?', 'not read');
+function addBookToLibrary(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
 let newBook = new Book(title, author, pages, read);
 myLibrary.push(newBook);
-
+reloadDisplay();
 }
 
 const cardContainer = document.querySelector('.cardContainer');
@@ -68,15 +68,15 @@ infoTemplate.className = 'infoTemplate';
     cardContainer.appendChild(bookCard);
  }
 }
-function clearDisplay() {
+function reloadDisplay() {
         cardContainer.innerHTML = '';
+        displayBooks(myLibrary);
 }
 
 const displayButton = document.querySelector('#add');
 displayButton.addEventListener('click', () => {
         addBookToLibrary();
-        clearDisplay();
-        displayBooks(myLibrary);
+        reloadDisplay();
 });
 
 displayBooks(myLibrary);
