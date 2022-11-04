@@ -49,6 +49,7 @@ infoTemplate.className = 'infoTemplate';
 
     console.log(book)
     for(let prop in book) {
+/*         if (prop =! "<prototype>") {} */
         let bookData = document.createElement('div');
         bookData.className = 'bookData';
         bookData.textContent += book[prop];
@@ -69,8 +70,11 @@ infoTemplate.className = 'infoTemplate';
  }
 }
 function reloadDisplay() {
+const cont = document.querySelector('.container');
         cardContainer.innerHTML = '';
         displayBooks(myLibrary);
+        /* add if( formOverlay is child of cont )*/
+        cont.removeChild(formOverlay);
 }
 
 const displayButton = document.querySelector('#add');
