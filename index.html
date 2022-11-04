@@ -143,9 +143,8 @@ showForm();
 
 submitNew.addEventListener('click', (event) => {
         event.preventDefault();
-        let userBook = new Book(ftitle.value, fauthor.value, 
-                                fpages.value, fread.value);
-        console.log(userBook);
+        addBookToLibrary(ftitle.value, fauthor.value, 
+                        fpages.value, fread.value);
 
 });
 
