@@ -31,7 +31,7 @@ function addBookToLibrary(title, author, pages, read) {
         this.read = read;
 let newBook = new Book(title, author, pages, read);
 myLibrary.push(newBook);
-reloadDisplay();
+
 }
 
 const cardContainer = document.querySelector('.cardContainer');
